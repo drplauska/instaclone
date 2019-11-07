@@ -1,1 +1,3 @@
-# instaclone
+# Instaclone
+
+- Cloning instagram using laravel
