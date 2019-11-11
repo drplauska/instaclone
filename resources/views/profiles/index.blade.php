@@ -24,15 +24,11 @@
 		</div>
 	</div>
 	<div class="row pt-1">
+		@foreach($user->posts as $post)
 		<div class="col-4">
-			<img src="https://instagram.fkun1-1.fna.fbcdn.net/vp/5e591294dc6c96d06d6a891eeb89537c/5E5CB28B/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/56418404_997257637133976_7632637632742178736_n.jpg?_nc_ht=instagram.fkun1-1.fna.fbcdn.net&_nc_cat=100" class="w-100">
+			<img src="/storage/{{ $post->image }}" class="w-100">
 		</div>
-		<div class="col-4">
-			<img src="https://instagram.fkun1-1.fna.fbcdn.net/vp/5e591294dc6c96d06d6a891eeb89537c/5E5CB28B/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/56418404_997257637133976_7632637632742178736_n.jpg?_nc_ht=instagram.fkun1-1.fna.fbcdn.net&_nc_cat=100" class="w-100">
-		</div>
-		<div class="col-4">
-			<img src="https://instagram.fkun1-1.fna.fbcdn.net/vp/5e591294dc6c96d06d6a891eeb89537c/5E5CB28B/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/56418404_997257637133976_7632637632742178736_n.jpg?_nc_ht=instagram.fkun1-1.fna.fbcdn.net&_nc_cat=100" class="w-100">
-		</div>
+		@endforeach
 	</div>
 </div>
 @endsection

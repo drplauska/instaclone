@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
 	<form action="/p" enctype="multipart/form-data" method="post">
+		@csrf
 		<div class="row">
 			<div class="col-8 offset-2">
 				<div class="row">
@@ -15,7 +16,7 @@
 						type="caption" 
 						class="form-control @error('caption') is-invalid @enderror" 
 						name="caption" value="{{ old('caption') }}" 
-						required 
+						required
 						autocomplete="caption" autofocus>
 
 					@error('caption')
@@ -26,11 +27,9 @@
 				</div>
 				<div class="row">
 					<label for="image" class="col-md-4 col-form-label">Image</label>
-					<input type="file" class="form-control-file" id="image" name="image">
+					<input type="file" class="form-control-file" id="image" name="image" required>
 					@error('image')
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $message }}</strong>
-						</span>
+						<strong>{{ $message }}</strong>
 					@enderror
 				</div>
 				<div class="row pt-4">
