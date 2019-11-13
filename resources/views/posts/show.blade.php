@@ -4,13 +4,13 @@
 <div class="container">
 	<div class="row">
 		<div class="col-8">
-			<img src="/storage/{{$post->image}}" alt="{{$post->caption}}" class="w-100">
+			<img src="{{$user->profile->profileImage()}}" alt="{{$post->caption}}" class="w-100">
 		</div>
 		<div class="col-4">
 			<a href="/profile/{{$post->user->id}}">
 				<div class="d-flex align-items-center">
 					<div>
-						<img src="/storage/{{ $post->user->profile->image}}" class="rounded-circle w-100" style="max-width: 40px">
+						<img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100" style="max-width: 40px">
 					</div>
 					<div class="pl-3">
 						<div class="font-weight-bold">
