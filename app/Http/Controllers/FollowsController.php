@@ -12,6 +12,9 @@ class FollowsController extends Controller
 	}
 	
     public function store(User $user){
+		if($user->id == auth()->user()->id){ // if user somehow tries to follow himself, it's not allowed
+			return false;
+		}
 		return auth()->user()->following()->toggle($user->profile);
 	}
 }

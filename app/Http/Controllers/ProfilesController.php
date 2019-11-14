@@ -31,8 +31,8 @@ class ProfilesController extends Controller
 				return $user->following->count();
 		});
 		//$followingCount = $user->following->count();
-
-		return view('profiles.index', compact('user', 'follows', 'postCount', 'followerCount', 'followingCount'));
+		$authId = auth()->user()->id;
+		return view('profiles.index', compact('user', 'follows', 'postCount', 'followerCount', 'followingCount', 'authId'));
 	}
 
 	public function edit(User $user){

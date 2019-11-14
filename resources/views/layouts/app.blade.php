@@ -40,6 +40,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+						
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -50,6 +51,9 @@
                                 </li>
                             @endif
                         @else
+							<li class="nav-item">
+								<a class="nav-link" href="/p/recent">Recent posts</a>
+							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/profile/{{ Auth::user()->id }}">{{ Auth::user()->username }}</a>
                             </li>
