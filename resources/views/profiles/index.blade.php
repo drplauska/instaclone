@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
 		<div class="col-3 p-5">
-			<img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100">
+			<img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100" alt="Profile image">
 		</div>
 		<div class="col-9 pt-5">
 			<div class="d-flex justify-content-between align-items-baseline">
@@ -39,7 +39,7 @@
 		@foreach($user->posts as $post)
 		<div class="col-4">
 			<a href="/p/{{$post->id}}">
-				<img src="/storage/{{ $post->image }}" class="w-100">
+				<img src="/storage/{{ $post->image }}" class="w-100" alt="Post image {{$post->id}}">
 			</a>
 		</div>
 		@endforeach
